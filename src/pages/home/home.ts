@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { BookPage } from '../book/book';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,4 +20,13 @@ export class HomePage {
     
   }
 
-}
+  gotoBook(){
+
+  	let data = {
+  		title: 'goto Book.',
+  		name: 'book page.',
+  	};
+  	this.navCtrl.push(BookPage, data);
+  }
+
+}//export class
