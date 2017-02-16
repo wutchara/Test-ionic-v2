@@ -7,8 +7,33 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+
+  <br>
+  <br>
+    <button ion-button color="primary" (click)="gotoBook()">Go to Book</button>
+  <br>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  	{{hello}}
   </p>
+  <p>
+  	{{ hello3 | json }}
+  </p>
+  <p>
+  	{{hello3.name}}  {{hello3.lname}}
+  </p>
+
+  <input type="text" [value]="hello" #name>
+  <br>
+  input value : {{name?.value}}
+  <br>
+  <br>
+
+  <input type="text" [(ngModel)]="hello2">
+  <br>
+  input value : {{hello2}}
+  <br>
+
+  <p><b>Start Calling Page Book</b></p>
+  	<page-book></page-book>
+  <p><b>End Calling Page Book</b></p>
 </ion-content>
